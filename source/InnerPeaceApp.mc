@@ -10,6 +10,7 @@ class InnerPeaceApp extends Application.AppBase {
 
     function initialize() {
         AppBase.initialize();
+        _controller = new AppController();
     }
 
     function onStart(state as Dictionary?) as Void {
