@@ -19,3 +19,5 @@ developer_key.der.pub
 # Windows null device artifact
 NUL
 
+developer_key.pem
+developer_key.der

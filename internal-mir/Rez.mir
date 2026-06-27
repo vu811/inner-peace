@@ -1,0 +1,1556 @@
+[ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Lang,1,14,18]; ]
+import Toybox.Lang;
+[ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 2; @symbol_usingdef<0> = [Toybox,2,6,12]; @symbol_usingdef<1> = [WatchUi,2,13,20]; ]
+using Toybox.WatchUi;
+[ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 3; @symbol_usingdef<0> = [Toybox,3,6,12]; @symbol_usingdef<1> = [WatchUi,3,13,20]; @symbol_usingAlias = [Ui,3,24,26]; ]
+using Toybox.WatchUi as :Ui;
+[ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 4; @symbol_usingdef<0> = [Toybox,4,6,12]; @symbol_usingdef<1> = [Graphics,4,13,21]; ]
+using Toybox.Graphics;
+[ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 5; @symbol_usingdef<0> = [Toybox,5,6,12]; @symbol_usingdef<1> = [Graphics,5,13,21]; @symbol_usingAlias = [Gfx,5,25,28]; ]
+using Toybox.Graphics as :Gfx;
+[ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 7; @symbol_moduledef = [Rez,7,7,10]; ]
+module Rez {
+    [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 7; ]
+    <init> {
+    }
+    [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 8; @symbol_moduledef = [Drawables,8,11,20]; ]
+    module Drawables {
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 8; ]
+        <init> {
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 9; @position = 27; initialized = true; @symbol_vardef = [LauncherIcon,9,27,39]; @symbol_type<0> = [ResourceId,9,43,53]; ]
+        var LauncherIcon as ResourceId;
+    }
+    [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 12; @symbol_moduledef = [Layouts,12,11,18]; ]
+    module Layouts {
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 12; ]
+        <init> {
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 13; @symbol_functiondef = [InnerPeaceView,13,17,31]; @symbol_param<0> = [dc,13,32,34]; @symbol_param<0>_type<0> = [Graphics,13,38,46]; @symbol_param<0>_type<1> = [Dc,13,47,49]; @symbol_return<0> = [Array,13,54,59]; @symbol_return<1> = [WatchUi,13,60,67]; @symbol_return<2> = [Drawable,13,68,76]; ]
+        function InnerPeaceView(dc as Graphics.Dc) as Array<WatchUi.Drawable> {
+_Users_vunguyen_Projects_inner_peace_gen_006_B4116_00_source_Rez_mcgen_13_78_17_8_start:
+[ "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen" 14 12 ]
+            [ "_Users_vunguyen_Projects_inner_peace_gen_006_B4116_00_source_Rez_mcgen_13_78_17_8_start" "_Users_vunguyen_Projects_inner_peace_gen_006_B4116_00_source_Rez_mcgen_13_78_17_8_stop" ]
+            %rez_cmp_local_text_AppLabel.1 = local;
+            symbol [ rez_cmp_local_text_AppLabel %rez_cmp_local_text_AppLabel.1 14 16 43 ];
+            symbol [ WatchUi %tmp.3 14 50 57 ];
+            %tmp.3 = getm $.Toybox.WatchUi;
+            symbol [ Text %tmp.4 14 58 62 ];
+            %tmp.4 = getv function ? %tmp.3 :Text;
+            %tmp.5 = newd 7;
+            %tmp.7 = const :identifier;
+            symbol [ identifier %tmp.7 14 65 75 const ];
+            %tmp.8 = "AppLabel";
+            %tmp.9 = dup %tmp.5;
+            %tmp.10 = aputv %tmp.9 %tmp.7 %tmp.8;
+            %tmp.12 = const :color;
+            symbol [ color %tmp.12 14 90 95 const ];
+            symbol [ Graphics %tmp.13 14 97 105 ];
+            %tmp.13 = getm $.Toybox.Graphics;
+            symbol [ COLOR_WHITE %tmp.14 14 106 117 ];
+            %tmp.14 = getv %tmp.13 :COLOR_WHITE;
+            %tmp.15 = dup %tmp.10;
+            %tmp.16 = aputv %tmp.15 %tmp.12 %tmp.14;
+            %tmp.18 = const :locX;
+            symbol [ locX %tmp.18 14 120 124 const ];
+            %tmp.19 = lgetv %dc;
+            symbol [ dc %tmp.19 14 127 129 ];
+            symbol [ getWidth %tmp.20 14 130 138 ];
+            %tmp.20 = getv function %tmp.19 :getWidth;
+            %tmp.21 = invoke %tmp.19 %tmp.20();
+            %tmp.22 = 0.5;
+            %tmp.23 = mul %tmp.21 %tmp.22;
+            %tmp.24 = dup %tmp.16;
+            %tmp.25 = aputv %tmp.24 %tmp.18 %tmp.23;
+            %tmp.27 = const :locY;
+            symbol [ locY %tmp.27 14 150 154 const ];
+            %tmp.28 = lgetv %dc;
+            symbol [ dc %tmp.28 14 158 160 ];
+            symbol [ getHeight %tmp.29 14 161 170 ];
+            %tmp.29 = getv function %tmp.28 :getHeight;
+            %tmp.30 = invoke %tmp.28 %tmp.29();
+            %tmp.31 = lgetv %dc;
+            symbol [ dc %tmp.31 14 175 177 ];
+            symbol [ getFontHeight %tmp.32 14 178 191 ];
+            %tmp.32 = getv function %tmp.31 :getFontHeight;
+            symbol [ Graphics %tmp.33 14 192 200 ];
+            %tmp.33 = getm $.Toybox.Graphics;
+            symbol [ FONT_MEDIUM %tmp.34 14 201 212 ];
+            %tmp.34 = getv %tmp.33 :FONT_MEDIUM;
+            %tmp.35 = invoke %tmp.31 %tmp.32(%tmp.34);
+            %tmp.36 = sub %tmp.30 %tmp.35;
+            %tmp.37 = 0.5;
+            %tmp.38 = mul %tmp.36 %tmp.37;
+            %tmp.39 = dup %tmp.25;
+            %tmp.40 = aputv %tmp.39 %tmp.27 %tmp.38;
+            %tmp.42 = const :text;
+            symbol [ text %tmp.42 14 224 228 const ];
+            symbol [ $ %tmp.43 14 230 231 ];
+            %tmp.43 = getm $;
+            symbol [ Rez %tmp.44 14 232 235 ];
+            %tmp.44 = getv %tmp.43 :Rez;
+            symbol [ Strings %tmp.45 14 236 243 ];
+            %tmp.45 = getv %tmp.44 :Strings;
+            symbol [ AppName %tmp.46 14 244 251 ];
+            %tmp.46 = getv %tmp.45 :AppName;
+            %tmp.47 = dup %tmp.40;
+            %tmp.48 = aputv %tmp.47 %tmp.42 %tmp.46;
+            %tmp.50 = const :justification;
+            symbol [ justification %tmp.50 14 254 267 const ];
+            symbol [ Graphics %tmp.51 14 269 277 ];
+            %tmp.51 = getm $.Toybox.Graphics;
+            symbol [ TEXT_JUSTIFY_CENTER %tmp.52 14 278 297 ];
+            %tmp.52 = getv %tmp.51 :TEXT_JUSTIFY_CENTER;
+            %tmp.53 = dup %tmp.48;
+            %tmp.54 = aputv %tmp.53 %tmp.50 %tmp.52;
+            %tmp.56 = const :font;
+            symbol [ font %tmp.56 14 300 304 const ];
+            symbol [ Graphics %tmp.57 14 306 314 ];
+            %tmp.57 = getm $.Toybox.Graphics;
+            symbol [ FONT_MEDIUM %tmp.58 14 315 326 ];
+            %tmp.58 = getv %tmp.57 :FONT_MEDIUM;
+            %tmp.59 = dup %tmp.54;
+            %tmp.60 = aputv %tmp.59 %tmp.56 %tmp.58;
+            %tmp.1 = newc %tmp.4 (%tmp.60);
+            lputv %rez_cmp_local_text_AppLabel.1 %tmp.1;
+            symbol [ rez_cmp_local_text_AppLabel %rez_cmp_local_text_AppLabel.1 14 16 43 ];
+[ "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen" 16 12 ]
+            %tmp.61 = newa 1 Array<WatchUi.Drawable>;
+            symbol [ Array %tmp.61 16 52 57 ];
+            symbol [ WatchUi %tmp.61 16 58 65 ];
+            symbol [ Drawable %tmp.61 16 66 74 ];
+            %tmp.62 = lgetv %rez_cmp_local_text_AppLabel.1;
+            symbol [ rez_cmp_local_text_AppLabel %tmp.62 16 20 47 ];
+            %tmp.63 = dup %tmp.61;
+            %tmp.64 = aputv %tmp.63 0 %tmp.62;
+            ret %tmp.64;
+_Users_vunguyen_Projects_inner_peace_gen_006_B4116_00_source_Rez_mcgen_13_78_17_8_stop:
+        }
+    }
+    [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 20; @symbol_moduledef = [Strings,20,11,18]; ]
+    module Strings {
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 20; ]
+        <init> {
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 21; @position = 27; initialized = true; @symbol_vardef = [AppName,21,27,34]; @symbol_type<0> = [ResourceId,21,38,48]; ]
+        var AppName as ResourceId;
+    }
+    [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 24; @symbol_moduledef = [Styles,24,11,17]; ]
+    module Styles {
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 24; ]
+        <init> {
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 25; @symbol_moduledef = [prompt_font_enhanced_readability__body_with_title,25,15,64]; ]
+        module prompt_font_enhanced_readability__body_with_title {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 25; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 26; @position = 18; @symbol_constdef = [exclude,26,18,25]; @symbol_type<0> = [Boolean,26,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 29; @symbol_moduledef = [system_size__menu_header,29,15,39]; ]
+        module system_size__menu_header {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 29; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 30; @position = 18; @symbol_constdef = [width,30,18,23]; @symbol_type<0> = [Number,30,27,33]; ]
+            const width as Number = 320;
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 31; @position = 18; @symbol_constdef = [height,31,18,24]; @symbol_type<0> = [Number,31,28,34]; ]
+            const height as Number = 68;
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 34; @symbol_moduledef = [system_loc__hint_button_left_bottom,34,15,50]; ]
+        module system_loc__hint_button_left_bottom {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 34; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 35; @position = 18; @symbol_constdef = [exclude,35,18,25]; @symbol_type<0> = [Boolean,35,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 38; @symbol_moduledef = [prompt_font_enhanced_readability__body_no_title,38,15,62]; ]
+        module prompt_font_enhanced_readability__body_no_title {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 38; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 39; @position = 18; @symbol_constdef = [exclude,39,18,25]; @symbol_type<0> = [Boolean,39,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 42; @symbol_moduledef = [prompt_loc__body_no_title,42,15,40]; ]
+        module prompt_loc__body_no_title {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 42; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 43; @position = 18; @symbol_constdef = [x,43,18,19]; @symbol_type<0> = [Number,43,23,29]; ]
+            const x as Number = 0;
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 44; @position = 18; @symbol_constdef = [y,44,18,19]; @symbol_type<0> = [Number,44,23,29]; ]
+            const y as Number = 65;
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 47; @symbol_moduledef = [system_icon_dark__about,47,15,38]; ]
+        module system_icon_dark__about {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 47; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 48; @position = 18; @symbol_constdef = [filename,48,18,26]; @symbol_type<0> = [String,48,30,36]; ]
+            const filename as String = "/Users/vunguyen/Library/Application Support/Garmin/ConnectIQ/Devices/venusq2m/system_icon_dark__about.svg";
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 49; @position = 18; @symbol_constdef = [compress,49,18,26]; @symbol_type<0> = [String,49,30,36]; ]
+            const compress as String = "true";
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 50; @position = 18; @symbol_constdef = [dithering,50,18,27]; @symbol_type<0> = [String,50,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 51; @position = 18; @symbol_constdef = [automaticPalette,51,18,34]; @symbol_type<0> = [String,51,38,44]; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 54; @symbol_moduledef = [system_icon_light__question,54,15,42]; ]
+        module system_icon_light__question {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 54; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 55; @position = 18; @symbol_constdef = [filename,55,18,26]; @symbol_type<0> = [String,55,30,36]; ]
+            const filename as String = "/Users/vunguyen/Library/Application Support/Garmin/ConnectIQ/Devices/venusq2m/system_icon_light__question.svg";
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 56; @position = 18; @symbol_constdef = [compress,56,18,26]; @symbol_type<0> = [String,56,30,36]; ]
+            const compress as String = "true";
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 57; @position = 18; @symbol_constdef = [dithering,57,18,27]; @symbol_type<0> = [String,57,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 58; @position = 18; @symbol_constdef = [automaticPalette,58,18,34]; @symbol_type<0> = [String,58,38,44]; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 61; @symbol_moduledef = [system_loc__hint_button_left_top,61,15,47]; ]
+        module system_loc__hint_button_left_top {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 61; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 62; @position = 18; @symbol_constdef = [exclude,62,18,25]; @symbol_type<0> = [Boolean,62,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 65; @symbol_moduledef = [prompt_font__title,65,15,33]; ]
+        module prompt_font__title {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 65; ]
+            <init> {
+[ "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen" 66 18 ]
+                symbol [ Graphics %tmp.65 66 34 42 ];
+                %tmp.65 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_CENTER %tmp.66 66 43 62 ];
+                %tmp.66 = getv %tmp.65 :TEXT_JUSTIFY_CENTER;
+                symbol [ Graphics %tmp.67 66 63 71 ];
+                %tmp.67 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_VCENTER %tmp.68 66 72 92 ];
+                %tmp.68 = getv %tmp.67 :TEXT_JUSTIFY_VCENTER;
+                %tmp.69 = bitor %tmp.66 %tmp.68;
+                putv self :justification %tmp.69;
+[ "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen" 67 18 ]
+                symbol [ Graphics %tmp.70 67 25 33 ];
+                %tmp.70 = getm $.Toybox.Graphics;
+                symbol [ FONT_SMALL %tmp.71 67 34 44 ];
+                %tmp.71 = getv %tmp.70 :FONT_SMALL;
+                putv self :font %tmp.71;
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 66; @position = 18; @symbol_constdef = [justification,66,18,31]; ]
+            const justification;
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 67; @position = 18; @symbol_constdef = [font,67,18,22]; ]
+            const font;
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 70; @symbol_moduledef = [system_icon_dark__discard,70,15,40]; ]
+        module system_icon_dark__discard {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 70; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 71; @position = 18; @symbol_constdef = [filename,71,18,26]; @symbol_type<0> = [String,71,30,36]; ]
+            const filename as String = "/Users/vunguyen/Library/Application Support/Garmin/ConnectIQ/Devices/venusq2m/system_icon_dark__discard.svg";
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 72; @position = 18; @symbol_constdef = [compress,72,18,26]; @symbol_type<0> = [String,72,30,36]; ]
+            const compress as String = "true";
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 73; @position = 18; @symbol_constdef = [dithering,73,18,27]; @symbol_type<0> = [String,73,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 74; @position = 18; @symbol_constdef = [automaticPalette,74,18,34]; @symbol_type<0> = [String,74,38,44]; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 77; @symbol_moduledef = [system_size__menu_item,77,15,37]; ]
+        module system_size__menu_item {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 77; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 78; @position = 18; @symbol_constdef = [width,78,18,23]; @symbol_type<0> = [Number,78,27,33]; ]
+            const width as Number = 320;
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 79; @position = 18; @symbol_constdef = [height,79,18,24]; @symbol_type<0> = [Number,79,28,34]; ]
+            const height as Number = 98;
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 82; @symbol_moduledef = [system_color_dark__text,82,15,38]; ]
+        module system_color_dark__text {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 82; ]
+            <init> {
+[ "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen" 84 18 ]
+                symbol [ Graphics %tmp.72 84 31 39 ];
+                %tmp.72 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.73 84 40 57 ];
+                %tmp.73 = getv %tmp.72 :COLOR_TRANSPARENT;
+                putv self :background %tmp.73;
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 83; @position = 18; @symbol_constdef = [color,83,18,23]; @symbol_type<0> = [Number,83,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 84; @position = 18; @symbol_constdef = [background,84,18,28]; ]
+            const background;
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 87; @symbol_moduledef = [system_icon_destructive__discard,87,15,47]; ]
+        module system_icon_destructive__discard {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 87; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 88; @position = 18; @symbol_constdef = [filename,88,18,26]; @symbol_type<0> = [String,88,30,36]; ]
+            const filename as String = "/Users/vunguyen/Library/Application Support/Garmin/ConnectIQ/Devices/venusq2m/system_icon_destructive__discard.svg";
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 89; @position = 18; @symbol_constdef = [dithering,89,18,27]; @symbol_type<0> = [String,89,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 92; @symbol_moduledef = [system_icon_dark__hint_action_menu,92,15,49]; ]
+        module system_icon_dark__hint_action_menu {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 92; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 93; @position = 18; @symbol_constdef = [filename,93,18,26]; @symbol_type<0> = [String,93,30,36]; ]
+            const filename as String = "/Users/vunguyen/Library/Application Support/Garmin/ConnectIQ/Devices/venusq2m/system_icon_dark__hint_action_menu.svg";
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 94; @position = 18; @symbol_constdef = [dithering,94,18,27]; @symbol_type<0> = [String,94,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 97; @symbol_moduledef = [prompt_size__title,97,15,33]; ]
+        module prompt_size__title {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 97; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 98; @position = 18; @symbol_constdef = [width,98,18,23]; @symbol_type<0> = [Number,98,27,33]; ]
+            const width as Number = 320;
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 99; @position = 18; @symbol_constdef = [height,99,18,24]; @symbol_type<0> = [Number,99,28,34]; ]
+            const height as Number = 54;
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 102; @symbol_moduledef = [confirmation_font__body,102,15,38]; ]
+        module confirmation_font__body {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 102; ]
+            <init> {
+[ "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen" 103 18 ]
+                symbol [ Graphics %tmp.74 103 34 42 ];
+                %tmp.74 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_CENTER %tmp.75 103 43 62 ];
+                %tmp.75 = getv %tmp.74 :TEXT_JUSTIFY_CENTER;
+                symbol [ Graphics %tmp.76 103 63 71 ];
+                %tmp.76 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_VCENTER %tmp.77 103 72 92 ];
+                %tmp.77 = getv %tmp.76 :TEXT_JUSTIFY_VCENTER;
+                %tmp.78 = bitor %tmp.75 %tmp.77;
+                putv self :justification %tmp.78;
+[ "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen" 104 18 ]
+                symbol [ Graphics %tmp.79 104 25 33 ];
+                %tmp.79 = getm $.Toybox.Graphics;
+                symbol [ FONT_TINY %tmp.80 104 34 43 ];
+                %tmp.80 = getv %tmp.79 :FONT_TINY;
+                putv self :font %tmp.80;
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 103; @position = 18; @symbol_constdef = [justification,103,18,31]; ]
+            const justification;
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 104; @position = 18; @symbol_constdef = [font,104,18,22]; ]
+            const font;
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 107; @symbol_moduledef = [system_color_dark__background,107,15,44]; ]
+        module system_color_dark__background {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 107; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 108; @position = 18; @symbol_constdef = [color,108,18,23]; @symbol_type<0> = [Number,108,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 109; @position = 18; @symbol_constdef = [background,109,18,28]; @symbol_type<0> = [Number,109,32,38]; ]
+            const background as Number = 0x000000;
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 112; @symbol_moduledef = [system_icon_destructive__hint_button_left_top,112,15,60]; ]
+        module system_icon_destructive__hint_button_left_top {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 112; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 113; @position = 18; @symbol_constdef = [exclude,113,18,25]; @symbol_type<0> = [Boolean,113,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 116; @symbol_moduledef = [system_size__launch_icon,116,15,39]; ]
+        module system_size__launch_icon {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 116; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 117; @position = 18; @symbol_constdef = [scaleX,117,18,24]; @symbol_type<0> = [Number,117,28,34]; ]
+            const scaleX as Number = 40;
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 118; @position = 18; @symbol_constdef = [scaleY,118,18,24]; @symbol_type<0> = [Number,118,28,34]; ]
+            const scaleY as Number = 40;
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 119; @position = 18; @symbol_constdef = [scaleRelativeTo,119,18,33]; @symbol_type<0> = [String,119,37,43]; ]
+            const scaleRelativeTo as String = "screen";
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 122; @symbol_moduledef = [confirmation_input__confirm,122,15,42]; ]
+        module confirmation_input__confirm {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 122; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 123; @position = 18; @symbol_constdef = [y1,123,18,20]; @symbol_type<0> = [Number,123,24,30]; ]
+            const y1 as Number = 300;
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 124; @position = 18; @symbol_constdef = [x1,124,18,20]; @symbol_type<0> = [Number,124,24,30]; ]
+            const x1 as Number = 0;
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 125; @position = 18; @symbol_constdef = [y2,125,18,20]; @symbol_type<0> = [Number,125,24,30]; ]
+            const y2 as Number = 360;
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 126; @position = 18; @symbol_constdef = [x2,126,18,20]; @symbol_type<0> = [Number,126,24,30]; ]
+            const x2 as Number = 320;
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 129; @symbol_moduledef = [prompt_font__body_with_title,129,15,43]; ]
+        module prompt_font__body_with_title {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 129; ]
+            <init> {
+[ "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen" 130 18 ]
+                symbol [ Graphics %tmp.81 130 34 42 ];
+                %tmp.81 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_CENTER %tmp.82 130 43 62 ];
+                %tmp.82 = getv %tmp.81 :TEXT_JUSTIFY_CENTER;
+                putv self :justification %tmp.82;
+[ "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen" 131 18 ]
+                symbol [ Graphics %tmp.83 131 25 33 ];
+                %tmp.83 = getm $.Toybox.Graphics;
+                symbol [ FONT_TINY %tmp.84 131 34 43 ];
+                %tmp.84 = getv %tmp.83 :FONT_TINY;
+                putv self :font %tmp.84;
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 130; @position = 18; @symbol_constdef = [justification,130,18,31]; ]
+            const justification;
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 131; @position = 18; @symbol_constdef = [font,131,18,22]; ]
+            const font;
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 134; @symbol_moduledef = [confirmation_loc__body,134,15,37]; ]
+        module confirmation_loc__body {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 134; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 135; @position = 18; @symbol_constdef = [x,135,18,19]; @symbol_type<0> = [Number,135,23,29]; ]
+            const x as Number = 0;
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 136; @position = 18; @symbol_constdef = [y,136,18,19]; @symbol_type<0> = [Number,136,23,29]; ]
+            const y as Number = 65;
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 139; @symbol_moduledef = [system_icon_destructive__hint_button_left_bottom,139,15,63]; ]
+        module system_icon_destructive__hint_button_left_bottom {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 139; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 140; @position = 18; @symbol_constdef = [exclude,140,18,25]; @symbol_type<0> = [Boolean,140,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 143; @symbol_moduledef = [prompt_color_dark__background,143,15,44]; ]
+        module prompt_color_dark__background {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 143; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 144; @position = 18; @symbol_constdef = [color,144,18,23]; @symbol_type<0> = [Number,144,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 145; @position = 18; @symbol_constdef = [background,145,18,28]; @symbol_type<0> = [Number,145,32,38]; ]
+            const background as Number = 0x000000;
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 148; @symbol_moduledef = [system_icon_destructive__hint_action_menu,148,15,56]; ]
+        module system_icon_destructive__hint_action_menu {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 148; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 149; @position = 18; @symbol_constdef = [filename,149,18,26]; @symbol_type<0> = [String,149,30,36]; ]
+            const filename as String = "/Users/vunguyen/Library/Application Support/Garmin/ConnectIQ/Devices/venusq2m/system_icon_destructive__hint_action_menu.svg";
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 150; @position = 18; @symbol_constdef = [dithering,150,18,27]; @symbol_type<0> = [String,150,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 153; @symbol_moduledef = [system_loc__hint_action_menu,153,15,43]; ]
+        module system_loc__hint_action_menu {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 153; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 154; @position = 18; @symbol_constdef = [x,154,18,19]; @symbol_type<0> = [Number,154,23,29]; ]
+            const x as Number = 0;
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 155; @position = 18; @symbol_constdef = [y,155,18,19]; @symbol_type<0> = [Number,155,23,29]; ]
+            const y as Number = 306;
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 158; @symbol_moduledef = [confirmation_icon__hint_confirm,158,15,46]; ]
+        module confirmation_icon__hint_confirm {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 158; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 159; @position = 18; @symbol_constdef = [filename,159,18,26]; @symbol_type<0> = [String,159,30,36]; ]
+            const filename as String = "/Users/vunguyen/Library/Application Support/Garmin/ConnectIQ/Devices/venusq2m/confirmation_icon__hint_completion.svg";
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 160; @position = 18; @symbol_constdef = [dithering,160,18,27]; @symbol_type<0> = [String,160,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 163; @symbol_moduledef = [system_loc__hint_button_left_middle,163,15,50]; ]
+        module system_loc__hint_button_left_middle {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 163; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 164; @position = 18; @symbol_constdef = [exclude,164,18,25]; @symbol_type<0> = [Boolean,164,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 167; @symbol_moduledef = [prompt_size__body_no_title,167,15,41]; ]
+        module prompt_size__body_no_title {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 167; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 168; @position = 18; @symbol_constdef = [width,168,18,23]; @symbol_type<0> = [Number,168,27,33]; ]
+            const width as Number = 320;
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 169; @position = 18; @symbol_constdef = [height,169,18,24]; @symbol_type<0> = [Number,169,28,34]; ]
+            const height as Number = 252;
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 172; @symbol_moduledef = [system_icon_light__hint_button_left_top,172,15,54]; ]
+        module system_icon_light__hint_button_left_top {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 172; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 173; @position = 18; @symbol_constdef = [exclude,173,18,25]; @symbol_type<0> = [Boolean,173,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 176; @symbol_moduledef = [prompt_color_light__background,176,15,45]; ]
+        module prompt_color_light__background {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 176; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 177; @position = 18; @symbol_constdef = [color,177,18,23]; @symbol_type<0> = [Number,177,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 178; @position = 18; @symbol_constdef = [background,178,18,28]; @symbol_type<0> = [Number,178,32,38]; ]
+            const background as Number = 0x000000;
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 181; @symbol_moduledef = [confirmation_input__delete,181,15,41]; ]
+        module confirmation_input__delete {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 181; ]
+            <init> {
+[ "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen" 182 18 ]
+                symbol [ WatchUi %tmp.85 182 27 34 ];
+                %tmp.85 = getm $.Toybox.WatchUi;
+                symbol [ KEY_ENTER %tmp.86 182 35 44 ];
+                %tmp.86 = getv %tmp.85 :KEY_ENTER;
+                putv self :button %tmp.86;
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 182; @position = 18; @symbol_constdef = [button,182,18,24]; ]
+            const button;
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 185; @symbol_moduledef = [system_icon_dark__hint_button_left_top,185,15,53]; ]
+        module system_icon_dark__hint_button_left_top {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 185; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 186; @position = 18; @symbol_constdef = [exclude,186,18,25]; @symbol_type<0> = [Boolean,186,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 189; @symbol_moduledef = [system_input__action_menu,189,15,40]; ]
+        module system_input__action_menu {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 189; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 190; @position = 18; @symbol_constdef = [y1,190,18,20]; @symbol_type<0> = [Number,190,24,30]; ]
+            const y1 as Number = 305;
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 191; @position = 18; @symbol_constdef = [x1,191,18,20]; @symbol_type<0> = [Number,191,24,30]; ]
+            const x1 as Number = 0;
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 192; @position = 18; @symbol_constdef = [y2,192,18,20]; @symbol_type<0> = [Number,192,24,30]; ]
+            const y2 as Number = 360;
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 193; @position = 18; @symbol_constdef = [x2,193,18,20]; @symbol_type<0> = [Number,193,24,30]; ]
+            const x2 as Number = 320;
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 196; @symbol_moduledef = [system_icon_light__save,196,15,38]; ]
+        module system_icon_light__save {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 196; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 197; @position = 18; @symbol_constdef = [filename,197,18,26]; @symbol_type<0> = [String,197,30,36]; ]
+            const filename as String = "/Users/vunguyen/Library/Application Support/Garmin/ConnectIQ/Devices/venusq2m/system_icon_light__save.svg";
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 198; @position = 18; @symbol_constdef = [compress,198,18,26]; @symbol_type<0> = [String,198,30,36]; ]
+            const compress as String = "true";
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 199; @position = 18; @symbol_constdef = [dithering,199,18,27]; @symbol_type<0> = [String,199,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 200; @position = 18; @symbol_constdef = [automaticPalette,200,18,34]; @symbol_type<0> = [String,200,38,44]; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 203; @symbol_moduledef = [prompt_color_light__body,203,15,39]; ]
+        module prompt_color_light__body {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 203; ]
+            <init> {
+[ "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen" 205 18 ]
+                symbol [ Graphics %tmp.87 205 31 39 ];
+                %tmp.87 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.88 205 40 57 ];
+                %tmp.88 = getv %tmp.87 :COLOR_TRANSPARENT;
+                putv self :background %tmp.88;
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 204; @position = 18; @symbol_constdef = [color,204,18,23]; @symbol_type<0> = [Number,204,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 205; @position = 18; @symbol_constdef = [background,205,18,28]; ]
+            const background;
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 208; @symbol_moduledef = [system_loc__subwindow,208,15,36]; ]
+        module system_loc__subwindow {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 208; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 209; @position = 18; @symbol_constdef = [exclude,209,18,25]; @symbol_type<0> = [Boolean,209,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 212; @symbol_moduledef = [system_icon_light__warning,212,15,41]; ]
+        module system_icon_light__warning {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 212; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 213; @position = 18; @symbol_constdef = [filename,213,18,26]; @symbol_type<0> = [String,213,30,36]; ]
+            const filename as String = "/Users/vunguyen/Library/Application Support/Garmin/ConnectIQ/Devices/venusq2m/system_icon_light__warning.svg";
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 214; @position = 18; @symbol_constdef = [compress,214,18,26]; @symbol_type<0> = [String,214,30,36]; ]
+            const compress as String = "true";
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 215; @position = 18; @symbol_constdef = [dithering,215,18,27]; @symbol_type<0> = [String,215,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 216; @position = 18; @symbol_constdef = [automaticPalette,216,18,34]; @symbol_type<0> = [String,216,38,44]; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 219; @symbol_moduledef = [confirmation_color_light__body,219,15,45]; ]
+        module confirmation_color_light__body {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 219; ]
+            <init> {
+[ "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen" 221 18 ]
+                symbol [ Graphics %tmp.89 221 31 39 ];
+                %tmp.89 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.90 221 40 57 ];
+                %tmp.90 = getv %tmp.89 :COLOR_TRANSPARENT;
+                putv self :background %tmp.90;
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 220; @position = 18; @symbol_constdef = [color,220,18,23]; @symbol_type<0> = [Number,220,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 221; @position = 18; @symbol_constdef = [background,221,18,28]; ]
+            const background;
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 224; @symbol_moduledef = [confirmation_icon_light__hint_keep,224,15,49]; ]
+        module confirmation_icon_light__hint_keep {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 224; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 225; @position = 18; @symbol_constdef = [filename,225,18,26]; @symbol_type<0> = [String,225,30,36]; ]
+            const filename as String = "/Users/vunguyen/Library/Application Support/Garmin/ConnectIQ/Devices/venusq2m/confirmation_icon__hint_keep.svg";
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 226; @position = 18; @symbol_constdef = [dithering,226,18,27]; @symbol_type<0> = [String,226,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 229; @symbol_moduledef = [activity_color_light__background,229,15,47]; ]
+        module activity_color_light__background {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 229; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 230; @position = 18; @symbol_constdef = [color,230,18,23]; @symbol_type<0> = [Number,230,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 231; @position = 18; @symbol_constdef = [background,231,18,28]; @symbol_type<0> = [Number,231,32,38]; ]
+            const background as Number = 0x000000;
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 234; @symbol_moduledef = [system_icon_positive__hint_button_right_top,234,15,58]; ]
+        module system_icon_positive__hint_button_right_top {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 234; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 235; @position = 18; @symbol_constdef = [filename,235,18,26]; @symbol_type<0> = [String,235,30,36]; ]
+            const filename as String = "/Users/vunguyen/Library/Application Support/Garmin/ConnectIQ/Devices/venusq2m/system_icon_positive__hint_button_right_top.svg";
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 236; @position = 18; @symbol_constdef = [dithering,236,18,27]; @symbol_type<0> = [String,236,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 239; @symbol_moduledef = [system_size__screen,239,15,34]; ]
+        module system_size__screen {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 239; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 240; @position = 18; @symbol_constdef = [width,240,18,23]; @symbol_type<0> = [Number,240,27,33]; ]
+            const width as Number = 320;
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 241; @position = 18; @symbol_constdef = [height,241,18,24]; @symbol_type<0> = [Number,241,28,34]; ]
+            const height as Number = 360;
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 244; @symbol_moduledef = [system_icon_destructive__hint_button_right_bottom,244,15,64]; ]
+        module system_icon_destructive__hint_button_right_bottom {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 244; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 245; @position = 18; @symbol_constdef = [filename,245,18,26]; @symbol_type<0> = [String,245,30,36]; ]
+            const filename as String = "/Users/vunguyen/Library/Application Support/Garmin/ConnectIQ/Devices/venusq2m/system_icon_destructive__hint_button_right_bottom.svg";
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 246; @position = 18; @symbol_constdef = [dithering,246,18,27]; @symbol_type<0> = [String,246,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 249; @symbol_moduledef = [system_color_light__background,249,15,45]; ]
+        module system_color_light__background {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 249; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 250; @position = 18; @symbol_constdef = [color,250,18,23]; @symbol_type<0> = [Number,250,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 251; @position = 18; @symbol_constdef = [background,251,18,28]; @symbol_type<0> = [Number,251,32,38]; ]
+            const background as Number = 0x000000;
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 254; @symbol_moduledef = [system_icon_destructive__hint_button_right_top,254,15,61]; ]
+        module system_icon_destructive__hint_button_right_top {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 254; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 255; @position = 18; @symbol_constdef = [filename,255,18,26]; @symbol_type<0> = [String,255,30,36]; ]
+            const filename as String = "/Users/vunguyen/Library/Application Support/Garmin/ConnectIQ/Devices/venusq2m/system_icon_destructive__hint_button_right_top.svg";
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 256; @position = 18; @symbol_constdef = [dithering,256,18,27]; @symbol_type<0> = [String,256,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 259; @symbol_moduledef = [confirmation_loc__hint_confirm,259,15,45]; ]
+        module confirmation_loc__hint_confirm {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 259; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 260; @position = 18; @symbol_constdef = [x,260,18,19]; @symbol_type<0> = [Number,260,23,29]; ]
+            const x as Number = 0;
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 261; @position = 18; @symbol_constdef = [y,261,18,19]; @symbol_type<0> = [Number,261,23,29]; ]
+            const y as Number = 299;
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 264; @symbol_moduledef = [activity_color_dark__text,264,15,40]; ]
+        module activity_color_dark__text {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 264; ]
+            <init> {
+[ "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen" 266 18 ]
+                symbol [ Graphics %tmp.91 266 31 39 ];
+                %tmp.91 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.92 266 40 57 ];
+                %tmp.92 = getv %tmp.91 :COLOR_TRANSPARENT;
+                putv self :background %tmp.92;
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 265; @position = 18; @symbol_constdef = [color,265,18,23]; @symbol_type<0> = [Number,265,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 266; @position = 18; @symbol_constdef = [background,266,18,28]; ]
+            const background;
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 269; @symbol_moduledef = [confirmation_input__keep,269,15,39]; ]
+        module confirmation_input__keep {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 269; ]
+            <init> {
+[ "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen" 270 18 ]
+                symbol [ WatchUi %tmp.93 270 27 34 ];
+                %tmp.93 = getm $.Toybox.WatchUi;
+                symbol [ KEY_ESC %tmp.94 270 35 42 ];
+                %tmp.94 = getv %tmp.93 :KEY_ESC;
+                putv self :button %tmp.94;
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 270; @position = 18; @symbol_constdef = [button,270,18,24]; ]
+            const button;
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 273; @symbol_moduledef = [prompt_loc__body_with_title,273,15,42]; ]
+        module prompt_loc__body_with_title {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 273; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 274; @position = 18; @symbol_constdef = [x,274,18,19]; @symbol_type<0> = [Number,274,23,29]; ]
+            const x as Number = 0;
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 275; @position = 18; @symbol_constdef = [y,275,18,19]; @symbol_type<0> = [Number,275,23,29]; ]
+            const y as Number = 90;
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 278; @symbol_moduledef = [system_icon_dark__search,278,15,39]; ]
+        module system_icon_dark__search {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 278; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 279; @position = 18; @symbol_constdef = [filename,279,18,26]; @symbol_type<0> = [String,279,30,36]; ]
+            const filename as String = "/Users/vunguyen/Library/Application Support/Garmin/ConnectIQ/Devices/venusq2m/system_icon_dark__search.svg";
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 280; @position = 18; @symbol_constdef = [compress,280,18,26]; @symbol_type<0> = [String,280,30,36]; ]
+            const compress as String = "true";
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 281; @position = 18; @symbol_constdef = [dithering,281,18,27]; @symbol_type<0> = [String,281,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 282; @position = 18; @symbol_constdef = [automaticPalette,282,18,34]; @symbol_type<0> = [String,282,38,44]; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 285; @symbol_moduledef = [activity_color_light__text,285,15,41]; ]
+        module activity_color_light__text {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 285; ]
+            <init> {
+[ "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen" 287 18 ]
+                symbol [ Graphics %tmp.95 287 31 39 ];
+                %tmp.95 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.96 287 40 57 ];
+                %tmp.96 = getv %tmp.95 :COLOR_TRANSPARENT;
+                putv self :background %tmp.96;
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 286; @position = 18; @symbol_constdef = [color,286,18,23]; @symbol_type<0> = [Number,286,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 287; @position = 18; @symbol_constdef = [background,287,18,28]; ]
+            const background;
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 290; @symbol_moduledef = [confirmation_icon__hint_keep,290,15,43]; ]
+        module confirmation_icon__hint_keep {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 290; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 291; @position = 18; @symbol_constdef = [filename,291,18,26]; @symbol_type<0> = [String,291,30,36]; ]
+            const filename as String = "/Users/vunguyen/Library/Application Support/Garmin/ConnectIQ/Devices/venusq2m/confirmation_icon__hint_keep.svg";
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 292; @position = 18; @symbol_constdef = [dithering,292,18,27]; @symbol_type<0> = [String,292,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 295; @symbol_moduledef = [system_icon_dark__save,295,15,37]; ]
+        module system_icon_dark__save {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 295; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 296; @position = 18; @symbol_constdef = [filename,296,18,26]; @symbol_type<0> = [String,296,30,36]; ]
+            const filename as String = "/Users/vunguyen/Library/Application Support/Garmin/ConnectIQ/Devices/venusq2m/system_icon_dark__save.svg";
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 297; @position = 18; @symbol_constdef = [compress,297,18,26]; @symbol_type<0> = [String,297,30,36]; ]
+            const compress as String = "true";
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 298; @position = 18; @symbol_constdef = [dithering,298,18,27]; @symbol_type<0> = [String,298,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 299; @position = 18; @symbol_constdef = [automaticPalette,299,18,34]; @symbol_type<0> = [String,299,38,44]; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 302; @symbol_moduledef = [system_icon_destructive__hint_button_left_middle,302,15,63]; ]
+        module system_icon_destructive__hint_button_left_middle {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 302; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 303; @position = 18; @symbol_constdef = [exclude,303,18,25]; @symbol_type<0> = [Boolean,303,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 306; @symbol_moduledef = [system_icon_light__search,306,15,40]; ]
+        module system_icon_light__search {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 306; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 307; @position = 18; @symbol_constdef = [filename,307,18,26]; @symbol_type<0> = [String,307,30,36]; ]
+            const filename as String = "/Users/vunguyen/Library/Application Support/Garmin/ConnectIQ/Devices/venusq2m/system_icon_light__search.svg";
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 308; @position = 18; @symbol_constdef = [compress,308,18,26]; @symbol_type<0> = [String,308,30,36]; ]
+            const compress as String = "true";
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 309; @position = 18; @symbol_constdef = [dithering,309,18,27]; @symbol_type<0> = [String,309,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 310; @position = 18; @symbol_constdef = [automaticPalette,310,18,34]; @symbol_type<0> = [String,310,38,44]; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 313; @symbol_moduledef = [system_icon_dark__hint_button_left_bottom,313,15,56]; ]
+        module system_icon_dark__hint_button_left_bottom {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 313; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 314; @position = 18; @symbol_constdef = [exclude,314,18,25]; @symbol_type<0> = [Boolean,314,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 317; @symbol_moduledef = [system_icon_positive__hint_button_left_top,317,15,57]; ]
+        module system_icon_positive__hint_button_left_top {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 317; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 318; @position = 18; @symbol_constdef = [exclude,318,18,25]; @symbol_type<0> = [Boolean,318,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 321; @symbol_moduledef = [system_loc__hint_button_right_bottom,321,15,51]; ]
+        module system_loc__hint_button_right_bottom {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 321; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 322; @position = 18; @symbol_constdef = [x,322,18,19]; @symbol_type<0> = [Number,322,23,29]; ]
+            const x as Number = 307;
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 323; @position = 18; @symbol_constdef = [y,323,18,19]; @symbol_type<0> = [Number,323,23,29]; ]
+            const y as Number = 287;
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 324; @position = 18; @symbol_constdef = [verticalJustification,324,18,39]; @symbol_type<0> = [String,324,43,49]; ]
+            const verticalJustification as String = "center";
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 327; @symbol_moduledef = [confirmation_icon_dark__hint_reject,327,15,50]; ]
+        module confirmation_icon_dark__hint_reject {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 327; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 328; @position = 18; @symbol_constdef = [filename,328,18,26]; @symbol_type<0> = [String,328,30,36]; ]
+            const filename as String = "/Users/vunguyen/Library/Application Support/Garmin/ConnectIQ/Devices/venusq2m/confirmation_icon__hint_reject.svg";
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 329; @position = 18; @symbol_constdef = [dithering,329,18,27]; @symbol_type<0> = [String,329,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 332; @symbol_moduledef = [confirmation_color_dark__body,332,15,44]; ]
+        module confirmation_color_dark__body {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 332; ]
+            <init> {
+[ "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen" 334 18 ]
+                symbol [ Graphics %tmp.97 334 31 39 ];
+                %tmp.97 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.98 334 40 57 ];
+                %tmp.98 = getv %tmp.97 :COLOR_TRANSPARENT;
+                putv self :background %tmp.98;
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 333; @position = 18; @symbol_constdef = [color,333,18,23]; @symbol_type<0> = [Number,333,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 334; @position = 18; @symbol_constdef = [background,334,18,28]; ]
+            const background;
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 337; @symbol_moduledef = [confirmation_icon_light__hint_confirm,337,15,52]; ]
+        module confirmation_icon_light__hint_confirm {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 337; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 338; @position = 18; @symbol_constdef = [filename,338,18,26]; @symbol_type<0> = [String,338,30,36]; ]
+            const filename as String = "/Users/vunguyen/Library/Application Support/Garmin/ConnectIQ/Devices/venusq2m/confirmation_icon__hint_completion.svg";
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 339; @position = 18; @symbol_constdef = [dithering,339,18,27]; @symbol_type<0> = [String,339,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 342; @symbol_moduledef = [prompt_color_dark__title,342,15,39]; ]
+        module prompt_color_dark__title {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 342; ]
+            <init> {
+[ "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen" 344 18 ]
+                symbol [ Graphics %tmp.99 344 31 39 ];
+                %tmp.99 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.100 344 40 57 ];
+                %tmp.100 = getv %tmp.99 :COLOR_TRANSPARENT;
+                putv self :background %tmp.100;
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 343; @position = 18; @symbol_constdef = [color,343,18,23]; @symbol_type<0> = [Number,343,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 344; @position = 18; @symbol_constdef = [background,344,18,28]; ]
+            const background;
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 347; @symbol_moduledef = [system_icon_destructive__cancel,347,15,46]; ]
+        module system_icon_destructive__cancel {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 347; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 348; @position = 18; @symbol_constdef = [filename,348,18,26]; @symbol_type<0> = [String,348,30,36]; ]
+            const filename as String = "/Users/vunguyen/Library/Application Support/Garmin/ConnectIQ/Devices/venusq2m/system_icon_destructive__cancel.svg";
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 349; @position = 18; @symbol_constdef = [dithering,349,18,27]; @symbol_type<0> = [String,349,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 352; @symbol_moduledef = [system_icon_light__hint_button_right_bottom,352,15,58]; ]
+        module system_icon_light__hint_button_right_bottom {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 352; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 353; @position = 18; @symbol_constdef = [filename,353,18,26]; @symbol_type<0> = [String,353,30,36]; ]
+            const filename as String = "/Users/vunguyen/Library/Application Support/Garmin/ConnectIQ/Devices/venusq2m/system_icon_light__hint_button_right_bottom.svg";
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 354; @position = 18; @symbol_constdef = [dithering,354,18,27]; @symbol_type<0> = [String,354,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 357; @symbol_moduledef = [prompt_loc__title,357,15,32]; ]
+        module prompt_loc__title {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 357; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 358; @position = 18; @symbol_constdef = [x,358,18,19]; @symbol_type<0> = [Number,358,23,29]; ]
+            const x as Number = 0;
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 359; @position = 18; @symbol_constdef = [y,359,18,19]; @symbol_type<0> = [Number,359,23,29]; ]
+            const y as Number = 32;
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 362; @symbol_moduledef = [confirmation_font_enhanced_readability__body,362,15,59]; ]
+        module confirmation_font_enhanced_readability__body {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 362; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 363; @position = 18; @symbol_constdef = [exclude,363,18,25]; @symbol_type<0> = [Boolean,363,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 366; @symbol_moduledef = [prompt_color_light__title,366,15,40]; ]
+        module prompt_color_light__title {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 366; ]
+            <init> {
+[ "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen" 368 18 ]
+                symbol [ Graphics %tmp.101 368 31 39 ];
+                %tmp.101 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.102 368 40 57 ];
+                %tmp.102 = getv %tmp.101 :COLOR_TRANSPARENT;
+                putv self :background %tmp.102;
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 367; @position = 18; @symbol_constdef = [color,367,18,23]; @symbol_type<0> = [Number,367,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 368; @position = 18; @symbol_constdef = [background,368,18,28]; ]
+            const background;
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 371; @symbol_moduledef = [system_icon_dark__hint_button_right_top,371,15,54]; ]
+        module system_icon_dark__hint_button_right_top {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 371; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 372; @position = 18; @symbol_constdef = [filename,372,18,26]; @symbol_type<0> = [String,372,30,36]; ]
+            const filename as String = "/Users/vunguyen/Library/Application Support/Garmin/ConnectIQ/Devices/venusq2m/system_icon_dark__hint_button_right_top.svg";
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 373; @position = 18; @symbol_constdef = [dithering,373,18,27]; @symbol_type<0> = [String,373,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 376; @symbol_moduledef = [system_icon_dark__hint_button_left_middle,376,15,56]; ]
+        module system_icon_dark__hint_button_left_middle {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 376; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 377; @position = 18; @symbol_constdef = [exclude,377,18,25]; @symbol_type<0> = [Boolean,377,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 380; @symbol_moduledef = [confirmation_icon_dark__hint_keep,380,15,48]; ]
+        module confirmation_icon_dark__hint_keep {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 380; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 381; @position = 18; @symbol_constdef = [filename,381,18,26]; @symbol_type<0> = [String,381,30,36]; ]
+            const filename as String = "/Users/vunguyen/Library/Application Support/Garmin/ConnectIQ/Devices/venusq2m/confirmation_icon__hint_keep.svg";
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 382; @position = 18; @symbol_constdef = [dithering,382,18,27]; @symbol_type<0> = [String,382,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 385; @symbol_moduledef = [system_icon_light__cancel,385,15,40]; ]
+        module system_icon_light__cancel {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 385; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 386; @position = 18; @symbol_constdef = [filename,386,18,26]; @symbol_type<0> = [String,386,30,36]; ]
+            const filename as String = "/Users/vunguyen/Library/Application Support/Garmin/ConnectIQ/Devices/venusq2m/system_icon_light__cancel.svg";
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 387; @position = 18; @symbol_constdef = [compress,387,18,26]; @symbol_type<0> = [String,387,30,36]; ]
+            const compress as String = "true";
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 388; @position = 18; @symbol_constdef = [dithering,388,18,27]; @symbol_type<0> = [String,388,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 389; @position = 18; @symbol_constdef = [automaticPalette,389,18,34]; @symbol_type<0> = [String,389,38,44]; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 392; @symbol_moduledef = [confirmation_icon_light__hint_reject,392,15,51]; ]
+        module confirmation_icon_light__hint_reject {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 392; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 393; @position = 18; @symbol_constdef = [filename,393,18,26]; @symbol_type<0> = [String,393,30,36]; ]
+            const filename as String = "/Users/vunguyen/Library/Application Support/Garmin/ConnectIQ/Devices/venusq2m/confirmation_icon__hint_reject.svg";
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 394; @position = 18; @symbol_constdef = [dithering,394,18,27]; @symbol_type<0> = [String,394,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 397; @symbol_moduledef = [system_icon_light__about,397,15,39]; ]
+        module system_icon_light__about {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 397; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 398; @position = 18; @symbol_constdef = [filename,398,18,26]; @symbol_type<0> = [String,398,30,36]; ]
+            const filename as String = "/Users/vunguyen/Library/Application Support/Garmin/ConnectIQ/Devices/venusq2m/system_icon_light__about.svg";
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 399; @position = 18; @symbol_constdef = [compress,399,18,26]; @symbol_type<0> = [String,399,30,36]; ]
+            const compress as String = "true";
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 400; @position = 18; @symbol_constdef = [dithering,400,18,27]; @symbol_type<0> = [String,400,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 401; @position = 18; @symbol_constdef = [automaticPalette,401,18,34]; @symbol_type<0> = [String,401,38,44]; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 404; @symbol_moduledef = [system_size__toast_icon,404,15,38]; ]
+        module system_size__toast_icon {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 404; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 405; @position = 18; @symbol_constdef = [scaleX,405,18,24]; @symbol_type<0> = [Number,405,28,34]; ]
+            const scaleX as Number = 34;
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 406; @position = 18; @symbol_constdef = [scaleY,406,18,24]; @symbol_type<0> = [Number,406,28,34]; ]
+            const scaleY as Number = 34;
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 407; @position = 18; @symbol_constdef = [scaleRelativeTo,407,18,33]; @symbol_type<0> = [String,407,37,43]; ]
+            const scaleRelativeTo as String = "screen";
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 410; @symbol_moduledef = [system_icon_dark__hint_button_right_middle,410,15,57]; ]
+        module system_icon_dark__hint_button_right_middle {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 410; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 411; @position = 18; @symbol_constdef = [exclude,411,18,25]; @symbol_type<0> = [Boolean,411,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 414; @symbol_moduledef = [confirmation_icon__hint_reject,414,15,45]; ]
+        module confirmation_icon__hint_reject {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 414; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 415; @position = 18; @symbol_constdef = [filename,415,18,26]; @symbol_type<0> = [String,415,30,36]; ]
+            const filename as String = "/Users/vunguyen/Library/Application Support/Garmin/ConnectIQ/Devices/venusq2m/confirmation_icon__hint_reject.svg";
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 416; @position = 18; @symbol_constdef = [dithering,416,18,27]; @symbol_type<0> = [String,416,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 419; @symbol_moduledef = [system_icon_light__hint_action_menu,419,15,50]; ]
+        module system_icon_light__hint_action_menu {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 419; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 420; @position = 18; @symbol_constdef = [filename,420,18,26]; @symbol_type<0> = [String,420,30,36]; ]
+            const filename as String = "/Users/vunguyen/Library/Application Support/Garmin/ConnectIQ/Devices/venusq2m/system_icon_light__hint_action_menu.svg";
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 421; @position = 18; @symbol_constdef = [dithering,421,18,27]; @symbol_type<0> = [String,421,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 424; @symbol_moduledef = [system_icon_light__hint_button_right_middle,424,15,58]; ]
+        module system_icon_light__hint_button_right_middle {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 424; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 425; @position = 18; @symbol_constdef = [exclude,425,18,25]; @symbol_type<0> = [Boolean,425,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 428; @symbol_moduledef = [system_icon_destructive__hint_button_right_middle,428,15,64]; ]
+        module system_icon_destructive__hint_button_right_middle {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 428; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 429; @position = 18; @symbol_constdef = [exclude,429,18,25]; @symbol_type<0> = [Boolean,429,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 432; @symbol_moduledef = [confirmation_loc__hint_reject,432,15,44]; ]
+        module confirmation_loc__hint_reject {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 432; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 433; @position = 18; @symbol_constdef = [x,433,18,19]; @symbol_type<0> = [Number,433,23,29]; ]
+            const x as Number = 0;
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 434; @position = 18; @symbol_constdef = [y,434,18,19]; @symbol_type<0> = [Number,434,23,29]; ]
+            const y as Number = 0;
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 437; @symbol_moduledef = [confirmation_icon_dark__hint_delete,437,15,50]; ]
+        module confirmation_icon_dark__hint_delete {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 437; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 438; @position = 18; @symbol_constdef = [filename,438,18,26]; @symbol_type<0> = [String,438,30,36]; ]
+            const filename as String = "/Users/vunguyen/Library/Application Support/Garmin/ConnectIQ/Devices/venusq2m/confirmation_icon__hint_delete.svg";
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 439; @position = 18; @symbol_constdef = [dithering,439,18,27]; @symbol_type<0> = [String,439,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 442; @symbol_moduledef = [activity_color_dark__background,442,15,46]; ]
+        module activity_color_dark__background {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 442; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 443; @position = 18; @symbol_constdef = [color,443,18,23]; @symbol_type<0> = [Number,443,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 444; @position = 18; @symbol_constdef = [background,444,18,28]; @symbol_type<0> = [Number,444,32,38]; ]
+            const background as Number = 0x000000;
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 447; @symbol_moduledef = [system_icon_light__hint_button_left_bottom,447,15,57]; ]
+        module system_icon_light__hint_button_left_bottom {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 447; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 448; @position = 18; @symbol_constdef = [exclude,448,18,25]; @symbol_type<0> = [Boolean,448,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 451; @symbol_moduledef = [system_icon_positive__hint_button_left_middle,451,15,60]; ]
+        module system_icon_positive__hint_button_left_middle {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 451; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 452; @position = 18; @symbol_constdef = [exclude,452,18,25]; @symbol_type<0> = [Boolean,452,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 455; @symbol_moduledef = [system_size__menu_icon,455,15,37]; ]
+        module system_size__menu_icon {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 455; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 456; @position = 18; @symbol_constdef = [scaleX,456,18,24]; @symbol_type<0> = [Number,456,28,34]; ]
+            const scaleX as Number = 52;
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 457; @position = 18; @symbol_constdef = [scaleY,457,18,24]; @symbol_type<0> = [Number,457,28,34]; ]
+            const scaleY as Number = 52;
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 458; @position = 18; @symbol_constdef = [scaleRelativeTo,458,18,33]; @symbol_type<0> = [String,458,37,43]; ]
+            const scaleRelativeTo as String = "screen";
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 461; @symbol_moduledef = [system_icon_destructive__warning,461,15,47]; ]
+        module system_icon_destructive__warning {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 461; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 462; @position = 18; @symbol_constdef = [filename,462,18,26]; @symbol_type<0> = [String,462,30,36]; ]
+            const filename as String = "/Users/vunguyen/Library/Application Support/Garmin/ConnectIQ/Devices/venusq2m/system_icon_destructive__warning.svg";
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 463; @position = 18; @symbol_constdef = [dithering,463,18,27]; @symbol_type<0> = [String,463,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 466; @symbol_moduledef = [system_loc__hint_button_right_middle,466,15,51]; ]
+        module system_loc__hint_button_right_middle {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 466; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 467; @position = 18; @symbol_constdef = [exclude,467,18,25]; @symbol_type<0> = [Boolean,467,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 470; @symbol_moduledef = [system_icon_dark__cancel,470,15,39]; ]
+        module system_icon_dark__cancel {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 470; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 471; @position = 18; @symbol_constdef = [filename,471,18,26]; @symbol_type<0> = [String,471,30,36]; ]
+            const filename as String = "/Users/vunguyen/Library/Application Support/Garmin/ConnectIQ/Devices/venusq2m/system_icon_dark__cancel.svg";
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 472; @position = 18; @symbol_constdef = [compress,472,18,26]; @symbol_type<0> = [String,472,30,36]; ]
+            const compress as String = "true";
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 473; @position = 18; @symbol_constdef = [dithering,473,18,27]; @symbol_type<0> = [String,473,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 474; @position = 18; @symbol_constdef = [automaticPalette,474,18,34]; @symbol_type<0> = [String,474,38,44]; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 477; @symbol_moduledef = [prompt_size__body_with_title,477,15,43]; ]
+        module prompt_size__body_with_title {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 477; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 478; @position = 18; @symbol_constdef = [width,478,18,23]; @symbol_type<0> = [Number,478,27,33]; ]
+            const width as Number = 320;
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 479; @position = 18; @symbol_constdef = [height,479,18,24]; @symbol_type<0> = [Number,479,28,34]; ]
+            const height as Number = 220;
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 482; @symbol_moduledef = [system_loc__hint_button_right_top,482,15,48]; ]
+        module system_loc__hint_button_right_top {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 482; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 483; @position = 18; @symbol_constdef = [x,483,18,19]; @symbol_type<0> = [Number,483,23,29]; ]
+            const x as Number = 307;
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 484; @position = 18; @symbol_constdef = [y,484,18,19]; @symbol_type<0> = [Number,484,23,29]; ]
+            const y as Number = 70;
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 485; @position = 18; @symbol_constdef = [verticalJustification,485,18,39]; @symbol_type<0> = [String,485,43,49]; ]
+            const verticalJustification as String = "center";
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 488; @symbol_moduledef = [system_color_light__text,488,15,39]; ]
+        module system_color_light__text {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 488; ]
+            <init> {
+[ "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen" 490 18 ]
+                symbol [ Graphics %tmp.103 490 31 39 ];
+                %tmp.103 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.104 490 40 57 ];
+                %tmp.104 = getv %tmp.103 :COLOR_TRANSPARENT;
+                putv self :background %tmp.104;
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 489; @position = 18; @symbol_constdef = [color,489,18,23]; @symbol_type<0> = [Number,489,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 490; @position = 18; @symbol_constdef = [background,490,18,28]; ]
+            const background;
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 493; @symbol_moduledef = [system_icon_light__check,493,15,39]; ]
+        module system_icon_light__check {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 493; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 494; @position = 18; @symbol_constdef = [filename,494,18,26]; @symbol_type<0> = [String,494,30,36]; ]
+            const filename as String = "/Users/vunguyen/Library/Application Support/Garmin/ConnectIQ/Devices/venusq2m/system_icon_light__check.svg";
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 495; @position = 18; @symbol_constdef = [compress,495,18,26]; @symbol_type<0> = [String,495,30,36]; ]
+            const compress as String = "true";
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 496; @position = 18; @symbol_constdef = [dithering,496,18,27]; @symbol_type<0> = [String,496,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 497; @position = 18; @symbol_constdef = [automaticPalette,497,18,34]; @symbol_type<0> = [String,497,38,44]; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 500; @symbol_moduledef = [confirmation_input__reject,500,15,41]; ]
+        module confirmation_input__reject {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 500; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 501; @position = 18; @symbol_constdef = [y1,501,18,20]; @symbol_type<0> = [Number,501,24,30]; ]
+            const y1 as Number = 0;
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 502; @position = 18; @symbol_constdef = [x1,502,18,20]; @symbol_type<0> = [Number,502,24,30]; ]
+            const x1 as Number = 0;
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 503; @position = 18; @symbol_constdef = [y2,503,18,20]; @symbol_type<0> = [Number,503,24,30]; ]
+            const y2 as Number = 60;
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 504; @position = 18; @symbol_constdef = [x2,504,18,20]; @symbol_type<0> = [Number,504,24,30]; ]
+            const x2 as Number = 320;
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 507; @symbol_moduledef = [system_icon_light__revert,507,15,40]; ]
+        module system_icon_light__revert {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 507; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 508; @position = 18; @symbol_constdef = [filename,508,18,26]; @symbol_type<0> = [String,508,30,36]; ]
+            const filename as String = "/Users/vunguyen/Library/Application Support/Garmin/ConnectIQ/Devices/venusq2m/system_icon_light__revert.svg";
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 509; @position = 18; @symbol_constdef = [compress,509,18,26]; @symbol_type<0> = [String,509,30,36]; ]
+            const compress as String = "true";
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 510; @position = 18; @symbol_constdef = [dithering,510,18,27]; @symbol_type<0> = [String,510,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 511; @position = 18; @symbol_constdef = [automaticPalette,511,18,34]; @symbol_type<0> = [String,511,38,44]; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 514; @symbol_moduledef = [system_size__subwindow,514,15,37]; ]
+        module system_size__subwindow {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 514; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 515; @position = 18; @symbol_constdef = [exclude,515,18,25]; @symbol_type<0> = [Boolean,515,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 518; @symbol_moduledef = [system_icon_positive__hint_button_left_bottom,518,15,60]; ]
+        module system_icon_positive__hint_button_left_bottom {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 518; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 519; @position = 18; @symbol_constdef = [exclude,519,18,25]; @symbol_type<0> = [Boolean,519,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 522; @symbol_moduledef = [system_icon_dark__check,522,15,38]; ]
+        module system_icon_dark__check {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 522; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 523; @position = 18; @symbol_constdef = [filename,523,18,26]; @symbol_type<0> = [String,523,30,36]; ]
+            const filename as String = "/Users/vunguyen/Library/Application Support/Garmin/ConnectIQ/Devices/venusq2m/system_icon_dark__check.svg";
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 524; @position = 18; @symbol_constdef = [compress,524,18,26]; @symbol_type<0> = [String,524,30,36]; ]
+            const compress as String = "true";
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 525; @position = 18; @symbol_constdef = [dithering,525,18,27]; @symbol_type<0> = [String,525,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 526; @position = 18; @symbol_constdef = [automaticPalette,526,18,34]; @symbol_type<0> = [String,526,38,44]; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 529; @symbol_moduledef = [confirmation_loc__hint_keep,529,15,42]; ]
+        module confirmation_loc__hint_keep {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 529; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 530; @position = 18; @symbol_constdef = [x,530,18,19]; @symbol_type<0> = [Number,530,23,29]; ]
+            const x as Number = 260;
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 531; @position = 18; @symbol_constdef = [y,531,18,19]; @symbol_type<0> = [Number,531,23,29]; ]
+            const y as Number = 288;
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 532; @position = 18; @symbol_constdef = [verticalJustification,532,18,39]; @symbol_type<0> = [String,532,43,49]; ]
+            const verticalJustification as String = "center";
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 535; @symbol_moduledef = [confirmation_loc__hint_delete,535,15,44]; ]
+        module confirmation_loc__hint_delete {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 535; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 536; @position = 18; @symbol_constdef = [x,536,18,19]; @symbol_type<0> = [Number,536,23,29]; ]
+            const x as Number = 260;
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 537; @position = 18; @symbol_constdef = [y,537,18,19]; @symbol_type<0> = [Number,537,23,29]; ]
+            const y as Number = 70;
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 538; @position = 18; @symbol_constdef = [verticalJustification,538,18,39]; @symbol_type<0> = [String,538,43,49]; ]
+            const verticalJustification as String = "center";
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 541; @symbol_moduledef = [system_icon_positive__hint_action_menu,541,15,53]; ]
+        module system_icon_positive__hint_action_menu {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 541; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 542; @position = 18; @symbol_constdef = [filename,542,18,26]; @symbol_type<0> = [String,542,30,36]; ]
+            const filename as String = "/Users/vunguyen/Library/Application Support/Garmin/ConnectIQ/Devices/venusq2m/system_icon_positive__hint_action_menu.svg";
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 543; @position = 18; @symbol_constdef = [dithering,543,18,27]; @symbol_type<0> = [String,543,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 546; @symbol_moduledef = [system_icon_positive__hint_button_right_middle,546,15,61]; ]
+        module system_icon_positive__hint_button_right_middle {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 546; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 547; @position = 18; @symbol_constdef = [exclude,547,18,25]; @symbol_type<0> = [Boolean,547,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 550; @symbol_moduledef = [system_icon_light__hint_button_left_middle,550,15,57]; ]
+        module system_icon_light__hint_button_left_middle {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 550; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 551; @position = 18; @symbol_constdef = [exclude,551,18,25]; @symbol_type<0> = [Boolean,551,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 554; @symbol_moduledef = [system_icon_dark__hint_button_right_bottom,554,15,57]; ]
+        module system_icon_dark__hint_button_right_bottom {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 554; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 555; @position = 18; @symbol_constdef = [filename,555,18,26]; @symbol_type<0> = [String,555,30,36]; ]
+            const filename as String = "/Users/vunguyen/Library/Application Support/Garmin/ConnectIQ/Devices/venusq2m/system_icon_dark__hint_button_right_bottom.svg";
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 556; @position = 18; @symbol_constdef = [dithering,556,18,27]; @symbol_type<0> = [String,556,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 559; @symbol_moduledef = [system_icon_positive__hint_button_right_bottom,559,15,61]; ]
+        module system_icon_positive__hint_button_right_bottom {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 559; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 560; @position = 18; @symbol_constdef = [filename,560,18,26]; @symbol_type<0> = [String,560,30,36]; ]
+            const filename as String = "/Users/vunguyen/Library/Application Support/Garmin/ConnectIQ/Devices/venusq2m/system_icon_positive__hint_button_right_bottom.svg";
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 561; @position = 18; @symbol_constdef = [dithering,561,18,27]; @symbol_type<0> = [String,561,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 564; @symbol_moduledef = [system_icon_dark__revert,564,15,39]; ]
+        module system_icon_dark__revert {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 564; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 565; @position = 18; @symbol_constdef = [filename,565,18,26]; @symbol_type<0> = [String,565,30,36]; ]
+            const filename as String = "/Users/vunguyen/Library/Application Support/Garmin/ConnectIQ/Devices/venusq2m/system_icon_dark__revert.svg";
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 566; @position = 18; @symbol_constdef = [compress,566,18,26]; @symbol_type<0> = [String,566,30,36]; ]
+            const compress as String = "true";
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 567; @position = 18; @symbol_constdef = [dithering,567,18,27]; @symbol_type<0> = [String,567,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 568; @position = 18; @symbol_constdef = [automaticPalette,568,18,34]; @symbol_type<0> = [String,568,38,44]; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 571; @symbol_moduledef = [confirmation_icon_light__hint_delete,571,15,51]; ]
+        module confirmation_icon_light__hint_delete {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 571; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 572; @position = 18; @symbol_constdef = [filename,572,18,26]; @symbol_type<0> = [String,572,30,36]; ]
+            const filename as String = "/Users/vunguyen/Library/Application Support/Garmin/ConnectIQ/Devices/venusq2m/confirmation_icon__hint_delete.svg";
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 573; @position = 18; @symbol_constdef = [dithering,573,18,27]; @symbol_type<0> = [String,573,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 576; @symbol_moduledef = [system_icon_dark__question,576,15,41]; ]
+        module system_icon_dark__question {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 576; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 577; @position = 18; @symbol_constdef = [filename,577,18,26]; @symbol_type<0> = [String,577,30,36]; ]
+            const filename as String = "/Users/vunguyen/Library/Application Support/Garmin/ConnectIQ/Devices/venusq2m/system_icon_dark__question.svg";
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 578; @position = 18; @symbol_constdef = [compress,578,18,26]; @symbol_type<0> = [String,578,30,36]; ]
+            const compress as String = "true";
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 579; @position = 18; @symbol_constdef = [dithering,579,18,27]; @symbol_type<0> = [String,579,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 580; @position = 18; @symbol_constdef = [automaticPalette,580,18,34]; @symbol_type<0> = [String,580,38,44]; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 583; @symbol_moduledef = [system_icon_light__discard,583,15,41]; ]
+        module system_icon_light__discard {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 583; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 584; @position = 18; @symbol_constdef = [filename,584,18,26]; @symbol_type<0> = [String,584,30,36]; ]
+            const filename as String = "/Users/vunguyen/Library/Application Support/Garmin/ConnectIQ/Devices/venusq2m/system_icon_light__discard.svg";
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 585; @position = 18; @symbol_constdef = [compress,585,18,26]; @symbol_type<0> = [String,585,30,36]; ]
+            const compress as String = "true";
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 586; @position = 18; @symbol_constdef = [dithering,586,18,27]; @symbol_type<0> = [String,586,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 587; @position = 18; @symbol_constdef = [automaticPalette,587,18,34]; @symbol_type<0> = [String,587,38,44]; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 590; @symbol_moduledef = [device_info,590,15,26]; ]
+        module device_info {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 590; ]
+            <init> {
+[ "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen" 592 18 ]
+                symbol [ Toybox %tmp.106 592 32 38 ];
+                %tmp.106 = getv ? :Toybox;
+                symbol [ System %tmp.107 592 39 45 ];
+                %tmp.107 = getv %tmp.106 :System;
+                symbol [ SCREEN_SHAPE_RECTANGLE %tmp.108 592 46 68 ];
+                %tmp.108 = getv %tmp.107 :SCREEN_SHAPE_RECTANGLE;
+                putv self :screenShape %tmp.108;
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 591; @position = 18; @symbol_constdef = [screenWidth,591,18,29]; @symbol_type<0> = [Number,591,33,39]; ]
+            const screenWidth as Number = 320;
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 592; @position = 18; @symbol_constdef = [screenShape,592,18,29]; ]
+            const screenShape;
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 593; @position = 18; @symbol_constdef = [hasNightMode,593,18,30]; @symbol_type<0> = [Boolean,593,34,41]; ]
+            const hasNightMode as Boolean = false;
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 594; @position = 18; @symbol_constdef = [hasGpu,594,18,24]; @symbol_type<0> = [Boolean,594,28,35]; ]
+            const hasGpu as Boolean = false;
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 595; @position = 18; @symbol_constdef = [screenHeight,595,18,30]; @symbol_type<0> = [Number,595,34,40]; ]
+            const screenHeight as Number = 360;
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 596; @position = 18; @symbol_constdef = [hasTouchScreen,596,18,32]; @symbol_type<0> = [Boolean,596,36,43]; ]
+            const hasTouchScreen as Boolean = true;
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 597; @position = 18; @symbol_constdef = [hasEnhancedReadabilityMode,597,18,44]; @symbol_type<0> = [Boolean,597,48,55]; ]
+            const hasEnhancedReadabilityMode as Boolean = false;
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 600; @symbol_moduledef = [confirmation_icon_dark__hint_confirm,600,15,51]; ]
+        module confirmation_icon_dark__hint_confirm {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 600; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 601; @position = 18; @symbol_constdef = [filename,601,18,26]; @symbol_type<0> = [String,601,30,36]; ]
+            const filename as String = "/Users/vunguyen/Library/Application Support/Garmin/ConnectIQ/Devices/venusq2m/confirmation_icon__hint_completion.svg";
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 602; @position = 18; @symbol_constdef = [dithering,602,18,27]; @symbol_type<0> = [String,602,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 605; @symbol_moduledef = [prompt_font__body_no_title,605,15,41]; ]
+        module prompt_font__body_no_title {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 605; ]
+            <init> {
+[ "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen" 606 18 ]
+                symbol [ Graphics %tmp.109 606 34 42 ];
+                %tmp.109 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_CENTER %tmp.110 606 43 62 ];
+                %tmp.110 = getv %tmp.109 :TEXT_JUSTIFY_CENTER;
+                symbol [ Graphics %tmp.111 606 63 71 ];
+                %tmp.111 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_VCENTER %tmp.112 606 72 92 ];
+                %tmp.112 = getv %tmp.111 :TEXT_JUSTIFY_VCENTER;
+                %tmp.113 = bitor %tmp.110 %tmp.112;
+                putv self :justification %tmp.113;
+[ "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen" 607 18 ]
+                symbol [ Graphics %tmp.114 607 25 33 ];
+                %tmp.114 = getm $.Toybox.Graphics;
+                symbol [ FONT_TINY %tmp.115 607 34 43 ];
+                %tmp.115 = getv %tmp.114 :FONT_TINY;
+                putv self :font %tmp.115;
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 606; @position = 18; @symbol_constdef = [justification,606,18,31]; ]
+            const justification;
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 607; @position = 18; @symbol_constdef = [font,607,18,22]; ]
+            const font;
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 610; @symbol_moduledef = [prompt_size__title_icon,610,15,38]; ]
+        module prompt_size__title_icon {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 610; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 611; @position = 18; @symbol_constdef = [scaleX,611,18,24]; @symbol_type<0> = [Float,611,28,33]; ]
+            const scaleX as Float = 0.14;
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 612; @position = 18; @symbol_constdef = [scaleRelativeTo,612,18,33]; @symbol_type<0> = [String,612,37,43]; ]
+            const scaleRelativeTo as String = "screen";
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 615; @symbol_moduledef = [system_icon_dark__warning,615,15,40]; ]
+        module system_icon_dark__warning {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 615; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 616; @position = 18; @symbol_constdef = [filename,616,18,26]; @symbol_type<0> = [String,616,30,36]; ]
+            const filename as String = "/Users/vunguyen/Library/Application Support/Garmin/ConnectIQ/Devices/venusq2m/system_icon_dark__warning.svg";
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 617; @position = 18; @symbol_constdef = [compress,617,18,26]; @symbol_type<0> = [String,617,30,36]; ]
+            const compress as String = "true";
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 618; @position = 18; @symbol_constdef = [dithering,618,18,27]; @symbol_type<0> = [String,618,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 619; @position = 18; @symbol_constdef = [automaticPalette,619,18,34]; @symbol_type<0> = [String,619,38,44]; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 622; @symbol_moduledef = [prompt_loc__title_icon,622,15,37]; ]
+        module prompt_loc__title_icon {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 622; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 623; @position = 18; @symbol_constdef = [x,623,18,19]; @symbol_type<0> = [Number,623,23,29]; ]
+            const x as Number = 160;
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 624; @position = 18; @symbol_constdef = [y,624,18,19]; @symbol_type<0> = [Number,624,23,29]; ]
+            const y as Number = 47;
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 625; @position = 18; @symbol_constdef = [horizontalJustification,625,18,41]; @symbol_type<0> = [String,625,45,51]; ]
+            const horizontalJustification as String = "center";
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 626; @position = 18; @symbol_constdef = [verticalJustification,626,18,39]; @symbol_type<0> = [String,626,43,49]; ]
+            const verticalJustification as String = "center";
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 629; @symbol_moduledef = [prompt_font_enhanced_readability__title,629,15,54]; ]
+        module prompt_font_enhanced_readability__title {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 629; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 630; @position = 18; @symbol_constdef = [exclude,630,18,25]; @symbol_type<0> = [Boolean,630,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 633; @symbol_moduledef = [prompt_color_dark__body,633,15,38]; ]
+        module prompt_color_dark__body {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 633; ]
+            <init> {
+[ "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen" 635 18 ]
+                symbol [ Graphics %tmp.116 635 31 39 ];
+                %tmp.116 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.117 635 40 57 ];
+                %tmp.117 = getv %tmp.116 :COLOR_TRANSPARENT;
+                putv self :background %tmp.117;
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 634; @position = 18; @symbol_constdef = [color,634,18,23]; @symbol_type<0> = [Number,634,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 635; @position = 18; @symbol_constdef = [background,635,18,28]; ]
+            const background;
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 638; @symbol_moduledef = [confirmation_icon__hint_delete,638,15,45]; ]
+        module confirmation_icon__hint_delete {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 638; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 639; @position = 18; @symbol_constdef = [filename,639,18,26]; @symbol_type<0> = [String,639,30,36]; ]
+            const filename as String = "/Users/vunguyen/Library/Application Support/Garmin/ConnectIQ/Devices/venusq2m/confirmation_icon__hint_delete.svg";
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 640; @position = 18; @symbol_constdef = [dithering,640,18,27]; @symbol_type<0> = [String,640,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 643; @symbol_moduledef = [system_icon_light__hint_button_right_top,643,15,55]; ]
+        module system_icon_light__hint_button_right_top {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 643; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 644; @position = 18; @symbol_constdef = [filename,644,18,26]; @symbol_type<0> = [String,644,30,36]; ]
+            const filename as String = "/Users/vunguyen/Library/Application Support/Garmin/ConnectIQ/Devices/venusq2m/system_icon_light__hint_button_right_top.svg";
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 645; @position = 18; @symbol_constdef = [dithering,645,18,27]; @symbol_type<0> = [String,645,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 648; @symbol_moduledef = [confirmation_size__body,648,15,38]; ]
+        module confirmation_size__body {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 648; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 649; @position = 18; @symbol_constdef = [width,649,18,23]; @symbol_type<0> = [Number,649,27,33]; ]
+            const width as Number = 320;
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 650; @position = 18; @symbol_constdef = [height,650,18,24]; @symbol_type<0> = [Number,650,28,34]; ]
+            const height as Number = 220;
+        }
+        [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 653; @symbol_moduledef = [system_icon_positive__check,653,15,42]; ]
+        module system_icon_positive__check {
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 653; ]
+            <init> {
+            }
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 654; @position = 18; @symbol_constdef = [filename,654,18,26]; @symbol_type<0> = [String,654,30,36]; ]
+            const filename as String = "/Users/vunguyen/Library/Application Support/Garmin/ConnectIQ/Devices/venusq2m/system_icon_positive__check.svg";
+            [ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 655; @position = 18; @symbol_constdef = [dithering,655,18,27]; @symbol_type<0> = [String,655,31,37]; ]
+            const dithering as String = "none";
+        }
+    }
+}
+[ @file = "/Users/vunguyen/Projects/inner-peace/gen/006-B4116-00/source/Rez.mcgen"; @line = 1; ]
+<init> {
+}

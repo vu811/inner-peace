@@ -2,21 +2,16 @@
     <iq:application
         entry="InnerPeaceApp"
         id="a7b3c4d5-e6f7-4891-a2b3-c4d5e6f78901"
-        minApiLevel="3.4.0"
+        launcherIcon="@Drawables.LauncherIcon"
+        minApiLevel="5.0.0"
         name="@Strings.AppName"
-        type="watchApp"
+        type="watch-app"
         version="1.0.0">
         <iq:products>
-            <iq:product id="fenix6"/>
-            <iq:product id="fenix7"/>
-            <iq:product id="forerunner245"/>
-            <iq:product id="forerunner745"/>
-            <iq:product id="forerunner945"/>
-            <iq:product id="vivoactive4"/>
-            <iq:product id="venu2"/>
+            <iq:product id="venusq2m"/>
         </iq:products>
         <iq:permissions>
-            <iq:uses-permission id="HeartRate"/>
+            <iq:uses-permission id="Sensor"/>
         </iq:permissions>
         <iq:languages>
             <iq:language>eng</iq:language>
