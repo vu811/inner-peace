@@ -15,56 +15,98 @@ class PromptView extends WatchUi.View {
     }
 
     function onUpdate(dc as Dc) as Void {
+        var w = dc.getWidth();
+        var h = dc.getHeight();
+        var cx = w / 2;
+
+        // Black background
         dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
         dc.clear();
 
-        var font = Graphics.FONT_SMALL;
-        var width = dc.getWidth();
-        var height = dc.getHeight();
-        var margin = 25;
+        // Red radial glow behind heart (layered circles, darkest outward)
+        var glowCy = h / 4;
+        dc.setColor(0x1A0000, Graphics.COLOR_TRANSPARENT);
+        dc.fillCircle(cx, glowCy, 90);
+        dc.setColor(0x330000, Graphics.COLOR_TRANSPARENT);
+        dc.fillCircle(cx, glowCy, 68);
+        dc.setColor(0x660000, Graphics.COLOR_TRANSPARENT);
+        dc.fillCircle(cx, glowCy, 48);
+        dc.setColor(0x990000, Graphics.COLOR_TRANSPARENT);
+        dc.fillCircle(cx, glowCy, 28);
 
-        var lines = wrapText(dc, _message, font, width - margin * 2);
+        // Heart icon
+        _drawHeart(dc, cx, glowCy, 20);
 
-        var lineHeight = dc.getFontHeight(font) + 4;
-        var totalHeight = lines.size() * lineHeight;
-        var startY = (height - totalHeight) / 2;
-
+        // Word-wrapped message — FONT_LARGE, ~16 chars per line on 320 px screen
+        var font = Graphics.FONT_LARGE;
+        var lines = _wrapText(_message, 16);
+        var lineH = dc.getFontHeight(font) + 6;
+        var totalH = lines.size() * lineH;
+        var textY = h / 2 - totalH / 2;
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
         for (var i = 0; i < lines.size(); i++) {
-            dc.drawText(
-                width / 2,
-                startY + i * lineHeight,
-                font,
-                lines[i] as String,
-                Graphics.TEXT_JUSTIFY_CENTER
-            );
+            dc.drawText(cx, textY + i * lineH, font, lines[i] as String, Graphics.TEXT_JUSTIFY_CENTER);
         }
+
+        // Curved arc above the dots (wide arc, center point below screen)
+        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
+        dc.setPenWidth(2);
+        dc.drawArc(cx, h + 55, 130, Graphics.ARC_CLOCKWISE, 210, 330);
+        dc.setPenWidth(1);
+
+        // Three pagination dots
+        var dotY = h * 7 / 8;
+        var dotR = 4;
+        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
+        dc.fillCircle(cx - 18, dotY, dotR);
+        dc.fillCircle(cx,      dotY, dotR);
+        dc.fillCircle(cx + 18, dotY, dotR);
     }
 
-    private function wrapText(
-        dc as Dc,
-        text as Lang.String,
-        font as Graphics.FontDefinition,
-        maxWidth as Lang.Number
-    ) as Lang.Array<Lang.String> {
-        var words = text.split(" ");
+    // Draws a filled red heart centred at (cx, cy) with the given size.
+    private function _drawHeart(dc as Dc, cx as Lang.Number, cy as Lang.Number, size as Lang.Number) as Void {
+        dc.setColor(0xFF2244, Graphics.COLOR_TRANSPARENT);
+        var r = size / 2;
+        // Two circles form the top bumps
+        dc.fillCircle(cx - r, cy - r / 2, r);
+        dc.fillCircle(cx + r, cy - r / 2, r);
+        // Triangle fills the lower V
+        var pts = [
+            [cx - size, cy - r / 2],
+            [cx + size, cy - r / 2],
+            [cx,        cy + size]
+        ];
+        dc.fillPolygon(pts);
+    }
+
+    // Word-wrap using only substring() — avoids String.split() unavailable on device.
+    private function _wrapText(text as Lang.String, maxChars as Lang.Number) as Lang.Array<Lang.String> {
         var lines = [] as Array<String>;
-        var current = "";
+        var len = text.length();
+        var pos = 0;
 
-        for (var i = 0; i < words.size(); i++) {
-            var word = words[i] as String;
-            var candidate = (current.length() > 0) ? (current + " " + word) : word;
-            var dims = dc.getTextDimensions(candidate, font);
-            if ((dims[0] as Number) > maxWidth && current.length() > 0) {
-                lines.add(current);
-                current = word;
-            } else {
-                current = candidate;
+        while (pos < len) {
+            if (len - pos <= maxChars) {
+                lines.add(text.substring(pos, len) as String);
+                break;
             }
-        }
 
-        if (current.length() > 0) {
-            lines.add(current);
+            // Scan backwards from pos+maxChars for a space to break on
+            var breakAt = pos + maxChars;
+            var found = false;
+            for (var i = breakAt; i > pos; i--) {
+                if (text.substring(i, i + 1).equals(" ")) {
+                    lines.add(text.substring(pos, i) as String);
+                    pos = i + 1;
+                    found = true;
+                    break;
+                }
+            }
+
+            if (!found) {
+                lines.add(text.substring(pos, breakAt) as String);
+                pos = breakAt;
+            }
         }
 
         return lines;

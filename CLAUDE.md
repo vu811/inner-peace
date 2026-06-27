@@ -29,6 +29,23 @@ docs/                 # Design and architecture documents
 - Follow Garmin best practices (event-driven sensor updates, proper lifecycle handling).
 - Separate business logic from UI — views contain no logic; logic contains no drawing code.
 
+## Build & Validate Workflow
+
+After making any source code change, always validate by building from the CLI before reporting success:
+
+```bash
+SDK="$HOME/Library/Application Support/Garmin/ConnectIQ/Sdks/connectiq-sdk-mac-9.2.0-2026-06-09-92a1605b2/bin"
+"$SDK/monkeyc" -o bin/innerpeace.prg -f monkey.jungle -y developer_key.der -d venusq2m -w
+```
+
+- If the build fails, read the error, fix it, and rebuild — repeat until `BUILD SUCCESSFUL`.
+- Only report a change as done once the build passes.
+- To run on the simulator after a successful build:
+  ```bash
+  open "$SDK/ConnectIQ.app"   # launch simulator (once)
+  "$SDK/monkeydo" bin/innerpeace.prg venusq2m &   # deploy in background
+  ```
+
 ## AI Coding Guidelines
 
 - **Never invent Garmin APIs.** Every API call must exist in the Connect IQ SDK documentation.

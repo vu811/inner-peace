@@ -5,17 +5,17 @@ import Toybox.WatchUi;
 class InnerPeaceApp extends Application.AppBase {
     private var _view as InnerPeaceView?;
     private var _hrMonitor as HeartRateMonitor?;
-    private var _detector as ThresholdDetector?;
-    private var _promptService as CalmPromptService?;
+    private var _controller as AppController?;
 
     function initialize() {
         AppBase.initialize();
-        _controller = new AppController();
     }
 
     function onStart(state as Dictionary?) as Void {
-        _detector = new ThresholdDetector();
-        _promptService = new CalmPromptService();
+        var controller = new AppController();
+        _controller = controller;
+        controller.start();
+
         var monitor = new HeartRateMonitor(method(:onHeartRate));
         _hrMonitor = monitor;
         monitor.start();
@@ -24,6 +24,9 @@ class InnerPeaceApp extends Application.AppBase {
     function onStop(state as Dictionary?) as Void {
         if (_hrMonitor != null) {
             (_hrMonitor as HeartRateMonitor).stop();
+        }
+        if (_controller != null) {
+            (_controller as AppController).stop();
         }
     }
 
@@ -37,11 +40,8 @@ class InnerPeaceApp extends Application.AppBase {
         if (_view != null) {
             (_view as InnerPeaceView).setHeartRate(hr);
         }
-        var detector = _detector;
-        if (detector != null && detector.evaluate(hr)) {
-            var service = _promptService;
-            var prompt = service != null ? service.nextPrompt() : "Breathe slowly";
-            WatchUi.pushView(new BreathingView(prompt), new BreathingDelegate(), WatchUi.SLIDE_UP);
+        if (_controller != null) {
+            (_controller as AppController).evaluate(hr);
         }
     }
 }

@@ -5,7 +5,7 @@ import Toybox.Timer;
 // Fires onScheduled(slot) at three fixed daily times:
 //   slot 0 = 08:00 (morning)
 //   slot 1 = 12:30 (midday)
-//   slot 2 = 16:30 (evening)
+//   slot 2 = 18:30 (evening)
 class MessageScheduler {
 
     private const TICK_MS = 60000;  // poll every minute
@@ -49,7 +49,7 @@ class MessageScheduler {
             slot = 0;
         } else if (h == 12 && m == 30) {
             slot = 1;
-        } else if (h == 16 && m == 30) {
+        } else if (h == 18 && m == 30) {
             slot = 2;
         }
 
